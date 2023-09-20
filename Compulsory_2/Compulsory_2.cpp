@@ -94,7 +94,7 @@ void main()
 				std::cin >> polyMenuValue;
 
 				if (polyMenuValue == "e") {
-					return;
+					break;
 				}
 				else if (checkInput(polyMenuValue))
 				{
@@ -122,7 +122,7 @@ void main()
 
 			do
 			{
-				//Does simple math operations. takes two numbers seperatly then peforms operation on them 
+				//Does simple math operations. takes two numbers separately then performs operation on them 
 				std::cout << "\nChoose(1-4, or type 'e' to exit): \n";
 				std::cout << "1. Addition\n";
 				std::cout << "2. Subtraction\n";
@@ -151,7 +151,7 @@ void main()
 						std::cout << "Enter second number: ";
 						std::cin >> num2;
 
-						sum = division(num1, num2);
+						sum = subtraction(num1, num2);
 						std::cout << "\nThe sum is " << sum;
 						break;
 
@@ -164,7 +164,7 @@ void main()
 						std::cout << "Enter second number: ";
 						std::cin >> num2;
 
-						sum = subtraction(num1, num2);
+						sum = division(num1, num2);
 						std::cout << "\nThe sum is " << sum;
 						break;
 

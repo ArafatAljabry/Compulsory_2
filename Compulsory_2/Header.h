@@ -127,7 +127,7 @@ int multiplication(int a, int b) {
 /// <param name="b">Second value</param>
 /// <returns>(int) sum</returns>
 int subtraction(int a, int b) {
-	int sum = a - b;
+	int sum = a-b;
 	return sum;
 }
 
