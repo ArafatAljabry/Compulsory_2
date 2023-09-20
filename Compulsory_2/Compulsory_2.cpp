@@ -13,22 +13,20 @@ void main()
 	//for factorial case
 	std::string positiveNumber;
 
-	//Polynomial
+	//for polynomial case
 	std::string poly1, poly2, poly3, polyMenuValue;
 	int firstPoly[4] = {};
 	int secondPoly[4] = {};
 	int secPolyPos = 0;
 	std::string polyNumber;
-	 
-	int count;
 
 	//for simple math case
 	std::string mathChoice;
 	int num1, num2, sum;
 	
-	//main menu
+	
 	do {
-
+		//main menu
 		std::cout << " make a choice (type 1-3 or 'e' to exit) \n";
 		std::cout << "1. Factorial\n";
 		std::cout << "2. Polynomial math\n";
@@ -44,6 +42,7 @@ void main()
 			{
 				std::cout << "Enter a positive number (type 'e' to exit)\n";
 				std::cin >> positiveNumber;
+
 				if (checkInput(positiveNumber) && std::stoi(positiveNumber) > 0) {
 					int result = factorial(std::stoi(positiveNumber));
 					std::cout << "Factorial of " << positiveNumber << " is " << result << "\n";
@@ -56,7 +55,7 @@ void main()
 			//polynomial
 			//Checks user input and doesn't add it to the array unless its the right type.
 			// Keeps asking until type is correct
-			//Switches from adding to first to the second array after third iteration of the loop
+			//Switches from adding to first to adding to the second array after third iteration of the loop
 			for (int i = 0; i < 8; i++)
 			{
 				if (i > 3) {
@@ -144,7 +143,7 @@ void main()
 						std::cout << "\nThe sum is " << sum;
 						break;
 
-						//Division
+						//Subtraction
 					case 2:
 						std::cout << "Enter first number: ";
 						std::cin >> num1;
@@ -157,7 +156,7 @@ void main()
 
 
 
-						//Subtraction
+						//Division
 					case 3:
 						std::cout << "Enter first number: ";
 						std::cin >> num1;
@@ -189,7 +188,7 @@ void main()
 			break;
 	
 		default:
-			//if wrong type
+			//if wrong input
 			std::cout << "Wrong input type\n";
 			break;
 		}
