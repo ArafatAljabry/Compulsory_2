@@ -1,8 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include<sstream>
+using std::string;
+using std::to_string;
 
 
 /// <summary>
@@ -26,16 +27,16 @@ int factorial(int x) {
 /// <param name="a"> First polynomial (as array)</param>
 /// <param name="b">Second polynomial (as array)</param>
 /// <returns>(String) ex: ax^3 + bx^2 + cx + d</returns>
-std::string addPolynomial(int a[4], int b[4]) {
+string addPolynomial(int a[4], int b[4]) {
 	int result[4] = {};
 
 	for (int i = 0; i < 4; i++) {
 		result[i] = a[i] + b[i];
 	}
-	std::string factor1 = std::to_string(result[0]) + "x^3 + ";
-	std::string factor2 = std::to_string(result[1]) + "x^2 + ";
-	std::string factor3 = std::to_string(result[2]) + "x + ";
-	std::string factor4 = std::to_string(result[3]);
+	string factor1 = to_string(result[0]) + "x^3 + ";
+	string factor2 = to_string(result[1]) + "x^2 + ";
+	string factor3 = to_string(result[2]) + "x + ";
+	string factor4 = to_string(result[3]);
 	
 	return factor1 + factor2 + factor3 + factor4;
 }
@@ -46,16 +47,16 @@ std::string addPolynomial(int a[4], int b[4]) {
 /// <param name="a">First polynomial (as array)</param>
 /// <param name="b">Second polynomial (as array</param>
 /// <returns>(String) ex: ax^3 + bx^2 + cx - d</returns>
-std::string subPolynomial(int a[4], int b[4]) {
+string subPolynomial(int a[4], int b[4]) {
 	int result[4] = {};
 
 	for (int i = 0; i < 4; i++) {
 		result[i] = a[i] - b[i];
 	}
-	std::string factor1 = std::to_string(result[0]) + "x^3 + ";
-	std::string factor2 = std::to_string(result[1]) + "x^2 + ";
-	std::string factor3 = std::to_string(result[2]) + "x - ";
-	std::string factor4 = std::to_string(result[3]);
+	string factor1 = to_string(result[0]) + "x^3 + ";
+	string factor2 = to_string(result[1]) + "x^2 + ";
+	string factor3 = to_string(result[2]) + "x - ";
+	string factor4 = to_string(result[3]);
 
 	return factor1 + factor2 + factor3 + factor3;
 }
@@ -66,7 +67,7 @@ std::string subPolynomial(int a[4], int b[4]) {
 /// <param name="a">First polynomial (as array)</param>
 /// <param name="b">Second polynomial (as array)</param>
 /// <returns>(String) New polynomial</returns>
-std::string multiplyPolynomial(int a[4], int b[4]) {
+string multiplyPolynomial(int a[4], int b[4]) {
 	int product[8] = {};
 	
 	//for each value in first array, multiply in with the every value in second array
@@ -75,13 +76,13 @@ std::string multiplyPolynomial(int a[4], int b[4]) {
 			product[i+k] += a[i] * b[k];
 		}
 	}
-	std::string factor1 = std::to_string(product[0]) + "x^6 + ";
-	std::string factor2 = std::to_string(product[1]) + "x^5 + ";
-	std::string factor3 = std::to_string(product[2]) + "x^4 + ";
-	std::string factor4 = std::to_string(product[3]) + "x^3 + ";
-	std::string factor5 = std::to_string(product[4]) + "x^2 + ";
-	std::string factor6 = std::to_string(product[5]) + "x + ";
-	std::string factor7 = std::to_string(product[6]);
+	string factor1 = to_string(product[0]) + "x^6 + ";
+	string factor2 = to_string(product[1]) + "x^5 + ";
+	string factor3 = to_string(product[2]) + "x^4 + ";
+	string factor4 = to_string(product[3]) + "x^3 + ";
+	string factor5 = to_string(product[4]) + "x^2 + ";
+	string factor6 = to_string(product[5]) + "x + ";
+	string factor7 = to_string(product[6]);
 
 
 	return factor1 + factor2 + factor3 + factor4 + factor5 + factor6 + factor7;
